@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN EN" 
+                       "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- init-methodは全てのpropertyをセットしおわったあとに呼ばれるメソッド、この場合、initメソッドを読んでいる。 -->
+    <bean id="messageBean" class="sample1.MessageBeanImpl" init-method="init">
+        <property name="greeting"><value>Hello, </value></property>
+    </bean>
+    <bean class="sample1.CustomBeanPostProcessor" />
+</beans>
